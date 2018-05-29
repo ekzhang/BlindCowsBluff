@@ -14,7 +14,7 @@ int main(int argc,char*argv[]){
 	int num_cow = atoi(argv[3]);
 	string str;
 	bool rs = false,es = false;
-	
+
 	while(cin>>str){
      	   if(str == "ROUND"){
 		if(!rs) {
@@ -27,7 +27,6 @@ int main(int argc,char*argv[]){
 		if(!es){
 			es = true;
 			rs = false;
-			cout<<"ROUND_END"<<endl;
 		}
 	   }
 	   if(str == "TURN"){
