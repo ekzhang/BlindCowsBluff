@@ -34,7 +34,7 @@ def get_data(file_name, labels_name):
 
 def train(model, X, y):
     model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
-    model.fit(X, y, callbacks=[CSVLogger('_us_training.log'), ModelCheckpoint('_us_model.{epoch:02d}.hdf5')])
+    model.fit(X, y, epochs=10, callbacks=[CSVLogger('_us_training.log'), ModelCheckpoint('_us_model.{epoch:02d}.hdf5')])
     # perhaps use checkpoints / callbacks
 
 def main():
